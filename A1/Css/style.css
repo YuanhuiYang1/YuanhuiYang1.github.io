@@ -105,6 +105,15 @@ h2{
     justify-content: space-around;
     margin: 10px;
     
+    
+}
+#high-scores-first-line {
+    padding-bottom: 30px;
+}
+.high-scores div {
+    width:150px;
+    text-align: center;
+
 }
 
 .high-scores-section {
@@ -182,6 +191,12 @@ p {
     align-items: center;
 
 }
+.character-nickname div {
+    width:150px;
+    text-align: center;
+}
+
+
 .players ul {
     margin:90px;
 }
@@ -231,7 +246,7 @@ p {
 }
 
 .footer {
-    padding-top: 370px;
+    padding-top: 200px;
     text-align: center;
     font-size: smaller;
 }
