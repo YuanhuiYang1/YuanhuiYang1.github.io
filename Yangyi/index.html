@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to your exclusive journey</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <h1 id="welcome">Welcome to your exclusive journey</h1>
+        <button id="button">Clickiss Me</button>
+        <div id="hb">
+            <img src="assets/Artboard 1.jpg" id="hbpic" al="hbpic">
+        
+    </div>
+        
+            <h3 id="arrow">&#8595</h3>
+        <h2 id="g">荣耀归给神哈</h2>
+    </section>
+
+    <script>
+       
+
+document.getElementById("button").addEventListener("click", function(){
+
+document.getElementById("welcome").style.display="none";
+document.getElementById("button").style.display="none";
+document.getElementById("hbpic").style.display="block";
+document.getElementById("arrow").style.display="block";
+
+
+})
+
+document.getElementById("hbpic").addEventListener("mouseleave", function(){ 
+
+        document.getElementById("g").style.display="block"; 
+        document.getElementById("hbpic").style.display="none";
+        document.getElementById("arrow").style.display="none";
+
+
+      
+  })
+
+    </script>
+    
+</body>
+</html>
