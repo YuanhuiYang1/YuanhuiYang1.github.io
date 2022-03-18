@@ -1,0 +1,77 @@
+body {
+    background-color: black;
+    color:white;
+    margin:auto;
+     
+    
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size:60px;
+}
+.button {
+    border-radius: 20px;
+    border:none;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    padding:10px 10px;
+    background-color:bisque;
+
+    
+}
+.buttons {
+    margin:auto;
+    text-align: center;
+}
+.color {
+    display: flex;
+    gap:100px;
+    justify-content: center;
+}
+#yellow {
+    background-color: yellow;
+}
+#blue {
+    background-color: blue;
+    color:white;
+}
+#number {
+    text-align: center;
+
+}
+
+#quantity {
+    font-size: 35px;
+    width: 118px;
+    background-color:bisque;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+}
+
+#main-1 {
+    padding-top: 250px;
+}
+#main-2 {
+    display:none;
+    padding-top: 250px;
+}
+#main-3 {
+    display:none;
+    padding-top: 250px;
+
+}
+#main-4 {
+    display:none;
+}
+
+#final {
+    display: none;
+}
+
+.final img{
+    width:20%;
+    height:50%;
+}
