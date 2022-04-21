@@ -1,0 +1,311 @@
+* {
+    padding: 0;
+    margin:0;
+}
+
+.logo-image {
+    width: 90px;
+    height: 50px;
+}
+
+.hero {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../Assets/patrick-hendry-unsplash\ Large.jpeg");
+    background-size: cover;
+    background-position: top;
+    background-attachment: scroll;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 20px;
+    
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+
+.nav {
+    display:flex;
+    justify-content:space-evenly;
+    align-items: top;
+    
+}
+h1 {
+    color:white;
+    font-weight: 400;
+    font-size: 80px;
+    min-width: 400px;
+    text-shadow: 1px 0 3px #000;
+    animation: move 5s infinite;
+   
+}
+
+@keyframes move {
+    0% {
+        transorm:translateX();
+        color: aliceblue;
+        opacity: 0;
+        
+    }
+
+    100% {
+        transform: translateX(10px);
+        opacity: 1;
+    }
+}
+
+.menu {
+    list-style-type: none;
+    display:flex;
+    justify-content:right;
+    flex-wrap: wrap;
+    font-size: 25px;
+    
+}
+
+.menu li a {
+    text-decoration: none;
+    margin:30px;
+}
+.menu-icon {
+    display: none;
+}
+.main-categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px 0 10px 0;
+    padding: 0 10px 0 10px;
+    overflow: visible;
+    row-gap: 16px;
+    column-gap: 16px;
+
+    }
+
+
+.category {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;  
+    height: 400px;
+    opacity: 0.85;
+
+}
+.button {
+    color:rgb(255, 255, 255);
+    padding: 5px 10px 5px 10px;
+    cursor:pointer;
+    border-radius: 8px;
+    border:0;
+    text-shadow: 1px 0 3px #000;
+    background-color: rgb(236, 91, 13)
+}
+
+.button a {
+    text-decoration: none;
+
+}
+.age {
+    background-image: url("../Assets/charlesdeluvio-zqhe4qjVTJI-unsplash.jpg");
+    background-size: cover;
+    background-position: center;   
+    
+}
+
+.story {
+    background-image: url("../Assets/eric-ward-ISg37AI2A-s-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+
+    
+}
+.star {
+    background-image: url("../Assets/star.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+    
+}
+
+.personality {
+    background-image: url("../Assets/personality.jpg");
+    background-size: cover;
+    background-position: 100% 32%;   
+}
+
+.stories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px 0 0 0;
+    row-gap: 16px;
+    column-gap: 16px;
+    padding: 0 10px 0 10px;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.grid p {
+    height:300px;
+}
+.story-image {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 40%;
+}
+.story-4 img {
+    object-position:70%;
+}
+
+h3 {
+    font-size: 24px;
+    margin:10px 0 10px 0;
+}
+
+.adopt-button {
+    margin:10px 0 10px 0;
+    border-radius: 8px;
+    border:2;
+    padding:10px;
+    
+}
+
+.aboutus {
+    display: flex;
+    min-height: 600px;
+    margin: 30px;
+    background-image:linear-gradient(rgba(237, 234, 234, 0.487),rgba(196, 196, 196, 0.279)), url(../Assets/aboutus.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    opacity: 1;
+}
+h4 {
+    display:flex;
+    text-align: center;
+   
+    margin: auto;
+    font-size: 24px;
+    font-weight: lighter;
+    width: 80%;
+    text-shadow: 1px 0 3px #000;
+    padding: 40px;
+    color:white;
+    line-height: 1.25;
+    background-color: rgba(0, 0, 0, 0.614);
+  
+}
+
+
+h5 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width:991px) {
+    
+    .star {
+        background-size:150%;
+    
+        
+    }
+    .grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+    }
+    
+    .grid p {
+        height:auto;
+       
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .story {
+        background-size: cover;
+    
+    }
+
+    .star {
+        background-size:180%;
+        
+    
+        
+    }
+    .category {
+        font-size: 30px; 
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width:425px){
+    .menu-icon {
+        display: block;
+    }
+    .menu li {
+        flex-basis: 100%;
+        
+    }
+    nav {
+        height: 30px;
+        overflow:hidden;
+        align-items: top;
+    }
+    .nav-expanded {
+        height:120px;
+    }
+    .logo img{
+        max-width:4em;
+        max-height: 2em;
+        
+    }
+    .head {
+        justify-content: center;
+        align-items: stretch;
+        flex-direction: row-reverse;
+        align-content: stretch;
+    }
+    .main-categories {
+        
+        grid-template-columns: 1fr;
+
+        }
+    h1 {
+       
+        font-size: 40px;
+        min-width: 300px;
+         
+    }
+    .stories {
+       
+        grid-template-columns: 1fr;
+
+    }
+
+    .grid p {
+        height:fit-content;
+    }
+    h4 {
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+       
+    }
+}
