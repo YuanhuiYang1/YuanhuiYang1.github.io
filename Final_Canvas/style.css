@@ -1,0 +1,31 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#canvas1 {
+    background:black;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%, -50%);
+}
+
+#controls {
+    position: absolute;
+    padding:10px;
+    border:2px solid white;
+    left:20px;
+    top:20px;
+    width:380px;
+    background: rgba(255,255,255,0.15);
+    margin-left: 35%;
+    margin-top:45%;
+}
+button {
+    padding:10px 10px;
+    width: 350px;
+    font-size:22px;
+    text-align: center;
+}
