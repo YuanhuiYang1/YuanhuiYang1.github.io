@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather info</title>
+</head>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<body>
+  <div class="weather">
+  <h1 id="location"></h1>
+  <p>Longitude: <span id="lon"></span></p>
+  <p>Latitude: <span id="lat"></span></p>
+  <p>Feels like:<span id="feelsLike"></span></p>
+  <p>Actual temperature:<span id="temp"></span></p>
+  <div id="weatherIcons"></div>
+</div>
+  <style>
+    .weather {
+      display:flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-content: center;
+      background-color: antiquewhite;
+      margin:10px 500px 10px 500px;
+      font-size: medium;
+      font-weight:bolder;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      border-radius:20px;
+    }
+    .weather p {
+      color:rgba(17, 14, 14, 0.774);
+   }
+    .weather span {
+      color:navy;
+      padding-left: 15px;
+      font-weight: bolder;
+
+    }
+      
+
+  </style>
+  <script>
+
+    $(document).ready(function() {
+
+      /* Ajax call (shorthand) to fetch JSON data */
+      $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=Toronto,ca&units=metric&appid=d27946723b4b473f7a665c9a890d9854", function(data){
+        console.log(data);
+        $("#location").html(data.name);
+        $("#lon").html(data.coord.lon);
+        $("#lat").html(data.coord.lat);
+       
+       
+        $('#feelsLike').html(Math.round(data.main.feels_like)+ '&#8451;');
+        $('#temp').html(Math.round(data.main.temp) + '&#8451;');
+
+         $.each( data.weather, function(key, weathercondition){
+          console.log(weathercondition.icon);
+          $('<img/>',{
+            src: `https://openweathermap.org/img/wn/${weathercondition.icon}@4x.png`,
+          }).appendTo('#weatherIcons');
+        });
+
+
+      
+      });
+
+      
+      
+    });
+
+  
+
+  </script>
+
+</body>
+</html>
